@@ -1,0 +1,8 @@
+{
+  "name": "simple-nodejs-proxy",
+  "version": "0.0.1",
+  "dependencies": {
+    "mocha": "^5.0.0",
+    "request": "^2.83.0"
+  }
+}
