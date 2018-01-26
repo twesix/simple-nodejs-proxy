@@ -1,11 +1,14 @@
-FROM node:9.4.0
+FROM mhart/alpine-node:9
 
-COPY lib /app/lib
-COPY package.json /app
+COPY . /app
 
 WORKDIR /app
 
-RUN npm install
+RUN   rm -rf .idea \
+    ; rm -rf node_modules \
+    ; rm package-lock.json \
+    ; npm config set registry "https://registry.npm.taobao.org/" \
+   && npm install
 
 EXPOSE 8888
 
